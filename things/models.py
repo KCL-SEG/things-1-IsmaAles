@@ -7,19 +7,19 @@ class Thing(Model):
 
         max_length = 30,
         unique=True,
-        blank=False
+        blank=False,
     )
     description = models.CharField(
         max_length = 120,
         unique=False,
-        blank = True
+        blank = True,
 
     )
     quantity = models.IntegerField(
         unique=False,
         validators=[
             MinValueValidator(0),
-            MaxValueValidator(100)
-        ]
+            MaxValueValidator(100),
+        ],
 
     )
